@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan de Pérdida de Peso - Mujeres</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f8f9fa;
+            color: #333;
+        }
+        header {
+            background: #ff4d6d;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+        section {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-top: 30px;
+            border-radius: 10px;
+        }
+        section img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input, button {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background: #ff4d6d;
+            color: white;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #e63e5d;
+        }
+        footer {
+            text-align: center;
+            font-size: 14px;
+            color: #777;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Consigue tu Plan de Pérdida de Peso en 7 Días</h1>
+        <p>Especial para mujeres que quieren resultados reales</p>
+    </header>
+
+    <section>
+        <img src="https://via.placeholder.com/500x300?text=Transformación+Real" alt="Transformación real">
+        <h2>Recibe tu plan GRATIS</h2>
+        <p>Deja tus datos y te enviaré por WhatsApp el plan completo para que empieces hoy mismo.</p>
+        
+        <form onsubmit="enviarWhatsApp(); return false;">
+            <input type="text" id="nombre" placeholder="Tu nombre" required>
+            <input type="email" id="email" placeholder="Tu correo" required>
+            <button type="submit">Recibir por WhatsApp</button>
+        </form>
+    </section>
+
+    <footer>
+        &copy; 2025 Tu Nombre - Todos los derechos reservados.
+    </footer>
+
+    <script>
+        function enviarWhatsApp() {
+            let nombre = document.getElementById("nombre").value;
+            let email = document.getElementById("email").value;
+            let telefono = "34XXXXXXXXX"; // ← Cambia por tu número en formato internacional
+            let mensaje = `Hola, soy ${nombre}. Mi correo es ${email} y quiero recibir mi plan de pérdida de peso.`;
+            let url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+            window.open(url, "_blank");
+        }
+    </script>
+
+</body>
+</html>
